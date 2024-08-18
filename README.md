@@ -20,7 +20,7 @@ To get started with the Voll Med API, follow these installation steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/voll-med-api.git
+   git clone https://github.com/Franklyn-S/voll-med-api.git
     ```
 2. **Navigate into the project directory:**
     ```bash
