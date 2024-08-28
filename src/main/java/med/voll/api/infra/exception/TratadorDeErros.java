@@ -1,6 +1,7 @@
 package med.voll.api.infra.exception;
 
 import jakarta.persistence.EntityNotFoundException;
+import jakarta.validation.ValidationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -27,6 +28,11 @@ public class TratadorDeErros {
         var erros = ex.getFieldErrors();
 
         return ResponseEntity.badRequest().body(erros.stream().map(DadosErroValidacao::new).toList());
+    }
+
+    @ExceptionHandler(ValidationException.class)
+    public ResponseEntity tratarErrorRegraDeNegocio(ValidationException ex) {
+        return ResponseEntity.badRequest().body(ex.getMessage());
     }
 
     @ExceptionHandler(HttpMessageNotReadableException.class)

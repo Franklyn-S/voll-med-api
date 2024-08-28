@@ -2,7 +2,10 @@ package med.voll.api.domain.medico;
 
 import jakarta.persistence.*;
 import lombok.*;
+import med.voll.api.domain.consulta.Consulta;
 import med.voll.api.domain.endereco.Endereco;
+
+import java.util.List;
 
 @Table(name="medicos")
 @Entity(name = "Medico")
