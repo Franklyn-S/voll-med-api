@@ -9,7 +9,8 @@ public record DadosEndereco(@NotBlank String logradouro,
                             @Pattern(regexp = "\\d{8}")
                             String cep,
                             @NotBlank String cidade,
-                            @NotBlank(message = "UF não pode ser nulo") String uf,
+                            @NotBlank(message = "UF não pode ser nulo")
+                            String uf,
                             String numero,
                             String complemento) {
 }
